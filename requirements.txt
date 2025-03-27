@@ -1,0 +1,28 @@
+# Flask for the web API
+flask
+werkzeug==0.16.0
+gunicorn==20.0.4
+Jinja2==2.11.1
+itsdangerous==1.1.0
+click==7.1.1
+
+# Computer Vision & Face Recognition
+opencv-python==4.1.2.30
+mtcnn==0.1.0
+deepface
+imutils==0.5.3
+imageio==2.6.1
+
+# Machine Learning & Numerical Computation
+numpy==1.16.1
+scikit-learn==0.20.3
+scipy==1.4.1
+pandas==0.25.3
+PyYAML==5.3
+
+# Miscellaneous (Needed for TensorFlow 1.14)
+protobuf==3.11.2
+pyparsing==2.4.6
+python-dateutil==2.8.1
+pytz==2019.3
+six==1.13.0
