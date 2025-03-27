@@ -1,68 +1,93 @@
 import cv2
 import os
+import logging
 from mtcnn import MTCNN
 
-def capture_images(employee_name, employee_id):
-    save_path = f"dataset/{employee_name}_{employee_id}/"
+# Ensure the logs directory exists
+LOG_DIR = "logs"
+os.makedirs(LOG_DIR, exist_ok=True)
 
-    if os.path.exists(save_path):
-        print(f" Employee {employee_name} (ID: {employee_id}) already exists.")
-        return
+# Configure logging
+logging.basicConfig(
+    filename=os.path.join(LOG_DIR, "face_register.log"),  # Save log in 'logs/' folder
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
-    os.makedirs(save_path, exist_ok=True)
+class FaceRegister:
+    def __init__(self, employee_name, employee_id):
+        self.employee_name = employee_name
+        self.employee_id = employee_id
+        self.save_path = f"dataset/{employee_name}_{employee_id}/"
+        self.detector = MTCNN()
+        self.cap = cv2.VideoCapture(0)
 
-    cap = cv2.VideoCapture(0)
-    if not cap.isOpened():
-        print(" Camera is not accessible. Please check your webcam.")
-        return
+        # Ensure camera is accessible
+        if not self.cap.isOpened():
+            logging.error("Camera is not accessible.")
+            raise RuntimeError("Camera is not accessible.")
 
-    detector = MTCNN()
+        # Create dataset directory if not exists
+        if os.path.exists(self.save_path):
+            logging.warning(f"Employee {employee_name} (ID: {employee_id}) already exists.")
+            raise FileExistsError(f"Employee {employee_name} (ID: {employee_id}) already exists.")
 
-    print(f"Capturing images for {employee_name} (ID: {employee_id})... Move your face into the frame.")
+        os.makedirs(self.save_path, exist_ok=True)
 
-    count = 0  # Count only valid face images
+    def capture_images(self, num_images=50):
+        logging.info(f"Starting image capture for {self.employee_name} (ID: {self.employee_id})")
+        print(f"Capturing images for {self.employee_name} (ID: {self.employee_id})... Move your face into the frame.")
 
-    while count < 50:
-        ret, frame = cap.read()
-        if not ret:
-            print(" Camera error. Exiting...")
-            break
+        count = 0  # Count valid face images
 
-        faces = detector.detect_faces(frame)
+        while count < num_images:
+            ret, frame = self.cap.read()
+            if not ret:
+                logging.error("Camera error. Exiting...")
+                break
 
-        for face in faces:
-            x, y, width, height = face['box']
+            faces = self.detector.detect_faces(frame)
 
-            # Ensure cropping is within image bounds
-            x, y = max(0, x), max(0, y)
-            face_img = frame[y:y+height, x:x+width]
+            for face in faces:
+                x, y, width, height = face['box']
+                x, y = max(0, x), max(0, y)
+                face_img = frame[y:y+height, x:x+width]
 
-            if face_img.size == 0:
-                continue  # Skip if the cropped image is invalid
+                if face_img.size == 0:
+                    continue  # Skip invalid cropped image
 
-            count += 1
-            img_path = os.path.join(save_path, f"{count}.jpg")
-            cv2.imwrite(img_path, face_img)  # Save only the cropped face
-            print(f" Image {count} captured (Face detected)")
+                count += 1
+                img_path = os.path.join(self.save_path, f"{count}.jpg")
+                cv2.imwrite(img_path, face_img)
+                logging.info(f"Image {count} captured successfully.")
+                print(f"Image {count} captured (Face detected)")
 
-            # Draw bounding box for visualization only (not saved)
-            cv2.rectangle(frame, (x, y), (x + width, y + height), (0, 255, 0), 2)
+                # Draw bounding box for visualization only
+                cv2.rectangle(frame, (x, y), (x + width, y + height), (0, 255, 0), 2)
 
-        cv2.imshow("Capturing Image", frame)
+            cv2.imshow("Capturing Image", frame)
 
-        if cv2.waitKey(1) & 0xFF == ord('q'):  # Press 'q' to exit early
-            print("\n Capture stopped by user.")
-            break
+            if cv2.waitKey(1) & 0xFF == ord('q'):
+                logging.info("Capture stopped by user.")
+                print("\nCapture stopped by user.")
+                break
 
-    cap.release()
-    cv2.destroyAllWindows()
+        self.cap.release()
+        cv2.destroyAllWindows()
 
-    if count == 50:
-        print(f" Successfully captured 50 face images for {employee_name} (ID: {employee_id})")
-    else:
-        print(f" Only {count} images were captured. Please try again.")
+        if count == num_images:
+            logging.info(f"Successfully captured {num_images} images for {self.employee_name} (ID: {self.employee_id})")
+            print(f"Successfully captured {num_images} face images.")
+        else:
+            logging.warning(f"Only {count} images were captured.")
+            print(f"Only {count} images were captured. Please try again.")
 
 if __name__ == "__main__":
     emp_name = input("Enter Employee Name: ").strip()
     emp_id = input("Enter Employee ID: ").strip()
-    capture_images(emp_name, emp_id)
+    
+    try:
+        register = FaceRegister(emp_name, emp_id)
+        register.capture_images()
+    except (RuntimeError, FileExistsError) as e:
+        print(str(e))

@@ -1,0 +1,55 @@
+2025-03-27 09:41:49,586 - WARNING - From C:\Users\91740\anaconda3\envs\facerecognition\lib\site-packages\tensorflow\python\ops\init_ops.py:1251: calling VarianceScaling.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2025-03-27 09:42:14,558 - INFO - Starting image capture for Ajay Chaudhary (ID: 2004)
+2025-03-27 09:42:15,855 - INFO - Image 1 captured successfully.
+2025-03-27 09:42:16,257 - INFO - Image 2 captured successfully.
+2025-03-27 09:42:16,446 - INFO - Image 3 captured successfully.
+2025-03-27 09:42:16,683 - INFO - Image 4 captured successfully.
+2025-03-27 09:42:16,916 - INFO - Image 5 captured successfully.
+2025-03-27 09:42:17,116 - INFO - Image 6 captured successfully.
+2025-03-27 09:42:17,329 - INFO - Image 7 captured successfully.
+2025-03-27 09:42:17,514 - INFO - Image 8 captured successfully.
+2025-03-27 09:42:17,683 - INFO - Image 9 captured successfully.
+2025-03-27 09:42:17,897 - INFO - Image 10 captured successfully.
+2025-03-27 09:42:18,091 - INFO - Image 11 captured successfully.
+2025-03-27 09:42:18,271 - INFO - Image 12 captured successfully.
+2025-03-27 09:42:18,454 - INFO - Image 13 captured successfully.
+2025-03-27 09:42:18,694 - INFO - Image 14 captured successfully.
+2025-03-27 09:42:18,888 - INFO - Image 15 captured successfully.
+2025-03-27 09:42:19,094 - INFO - Image 16 captured successfully.
+2025-03-27 09:42:19,271 - INFO - Image 17 captured successfully.
+2025-03-27 09:42:19,442 - INFO - Image 18 captured successfully.
+2025-03-27 09:42:19,597 - INFO - Image 19 captured successfully.
+2025-03-27 09:42:19,785 - INFO - Image 20 captured successfully.
+2025-03-27 09:42:19,946 - INFO - Image 21 captured successfully.
+2025-03-27 09:42:20,098 - INFO - Image 22 captured successfully.
+2025-03-27 09:42:20,234 - INFO - Image 23 captured successfully.
+2025-03-27 09:42:20,542 - INFO - Image 24 captured successfully.
+2025-03-27 09:42:20,795 - INFO - Image 25 captured successfully.
+2025-03-27 09:42:20,953 - INFO - Image 26 captured successfully.
+2025-03-27 09:42:21,116 - INFO - Image 27 captured successfully.
+2025-03-27 09:42:21,258 - INFO - Image 28 captured successfully.
+2025-03-27 09:42:21,383 - INFO - Image 29 captured successfully.
+2025-03-27 09:42:21,529 - INFO - Image 30 captured successfully.
+2025-03-27 09:42:21,682 - INFO - Image 31 captured successfully.
+2025-03-27 09:42:21,811 - INFO - Image 32 captured successfully.
+2025-03-27 09:42:21,983 - INFO - Image 33 captured successfully.
+2025-03-27 09:42:22,164 - INFO - Image 34 captured successfully.
+2025-03-27 09:42:22,306 - INFO - Image 35 captured successfully.
+2025-03-27 09:42:22,430 - INFO - Image 36 captured successfully.
+2025-03-27 09:42:22,557 - INFO - Image 37 captured successfully.
+2025-03-27 09:42:22,710 - INFO - Image 38 captured successfully.
+2025-03-27 09:42:22,846 - INFO - Image 39 captured successfully.
+2025-03-27 09:42:22,974 - INFO - Image 40 captured successfully.
+2025-03-27 09:42:23,102 - INFO - Image 41 captured successfully.
+2025-03-27 09:42:23,538 - INFO - Image 42 captured successfully.
+2025-03-27 09:42:23,667 - INFO - Image 43 captured successfully.
+2025-03-27 09:42:23,922 - INFO - Image 44 captured successfully.
+2025-03-27 09:42:24,049 - INFO - Image 45 captured successfully.
+2025-03-27 09:42:24,175 - INFO - Image 46 captured successfully.
+2025-03-27 09:42:24,301 - INFO - Image 47 captured successfully.
+2025-03-27 09:42:24,665 - INFO - Image 48 captured successfully.
+2025-03-27 09:42:24,788 - INFO - Image 49 captured successfully.
+2025-03-27 09:42:24,918 - INFO - Image 50 captured successfully.
+2025-03-27 09:42:25,417 - INFO - Successfully captured 50 images for Ajay Chaudhary (ID: 2004)

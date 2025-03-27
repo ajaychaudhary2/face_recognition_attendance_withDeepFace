@@ -1,0 +1,55 @@
+2025-03-27 09:44:35,337 - WARNING - From C:\Users\91740\anaconda3\envs\facerecognition\lib\site-packages\tensorflow\python\ops\init_ops.py:1251: calling VarianceScaling.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2025-03-27 09:44:39,473 - INFO - Processed 1.jpg
+2025-03-27 09:44:39,502 - INFO - Processed 10.jpg
+2025-03-27 09:44:39,536 - INFO - Processed 11.jpg
+2025-03-27 09:44:39,564 - INFO - Processed 12.jpg
+2025-03-27 09:44:39,594 - INFO - Processed 13.jpg
+2025-03-27 09:44:39,624 - INFO - Processed 14.jpg
+2025-03-27 09:44:39,654 - INFO - Processed 15.jpg
+2025-03-27 09:44:39,683 - INFO - Processed 16.jpg
+2025-03-27 09:44:39,711 - INFO - Processed 17.jpg
+2025-03-27 09:44:39,740 - INFO - Processed 18.jpg
+2025-03-27 09:44:39,776 - INFO - Processed 19.jpg
+2025-03-27 09:44:39,806 - INFO - Processed 2.jpg
+2025-03-27 09:44:39,834 - INFO - Processed 20.jpg
+2025-03-27 09:44:39,863 - INFO - Processed 21.jpg
+2025-03-27 09:44:39,891 - INFO - Processed 22.jpg
+2025-03-27 09:44:39,924 - INFO - Processed 23.jpg
+2025-03-27 09:44:39,954 - INFO - Processed 24.jpg
+2025-03-27 09:44:39,982 - INFO - Processed 25.jpg
+2025-03-27 09:44:40,010 - INFO - Processed 26.jpg
+2025-03-27 09:44:40,039 - INFO - Processed 27.jpg
+2025-03-27 09:44:40,092 - INFO - Processed 28.jpg
+2025-03-27 09:44:40,121 - INFO - Processed 29.jpg
+2025-03-27 09:44:40,151 - INFO - Processed 3.jpg
+2025-03-27 09:44:40,180 - INFO - Processed 30.jpg
+2025-03-27 09:44:40,209 - INFO - Processed 31.jpg
+2025-03-27 09:44:40,237 - INFO - Processed 32.jpg
+2025-03-27 09:44:40,267 - INFO - Processed 33.jpg
+2025-03-27 09:44:40,296 - INFO - Processed 34.jpg
+2025-03-27 09:44:40,327 - INFO - Processed 35.jpg
+2025-03-27 09:44:40,354 - INFO - Processed 36.jpg
+2025-03-27 09:44:40,382 - INFO - Processed 37.jpg
+2025-03-27 09:44:40,411 - INFO - Processed 38.jpg
+2025-03-27 09:44:40,439 - INFO - Processed 39.jpg
+2025-03-27 09:44:40,466 - INFO - Processed 4.jpg
+2025-03-27 09:44:40,496 - INFO - Processed 40.jpg
+2025-03-27 09:44:40,526 - INFO - Processed 41.jpg
+2025-03-27 09:44:40,554 - INFO - Processed 42.jpg
+2025-03-27 09:44:40,582 - INFO - Processed 43.jpg
+2025-03-27 09:44:40,610 - INFO - Processed 44.jpg
+2025-03-27 09:44:40,638 - INFO - Processed 45.jpg
+2025-03-27 09:44:40,666 - INFO - Processed 46.jpg
+2025-03-27 09:44:40,697 - INFO - Processed 47.jpg
+2025-03-27 09:44:40,724 - INFO - Processed 48.jpg
+2025-03-27 09:44:40,754 - INFO - Processed 49.jpg
+2025-03-27 09:44:40,784 - INFO - Processed 5.jpg
+2025-03-27 09:44:40,813 - INFO - Processed 50.jpg
+2025-03-27 09:44:40,841 - INFO - Processed 6.jpg
+2025-03-27 09:44:40,872 - INFO - Processed 7.jpg
+2025-03-27 09:44:40,901 - INFO - Processed 8.jpg
+2025-03-27 09:44:40,928 - INFO - Processed 9.jpg
+2025-03-27 09:44:40,933 - INFO - Embeddings saved for Employee ID 2004
+2025-03-27 09:44:40,934 - INFO - Metadata saved for Employee ID 2004
